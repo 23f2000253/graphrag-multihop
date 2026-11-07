@@ -29,3 +29,7 @@ def get_embedder():
 
 def embed_texts(texts):
     return [vec.tolist() for vec in get_embedder().embed(texts)]
+
+import logging
+
+logging.getLogger("neo4j.notifications").setLevel(logging.ERROR)
