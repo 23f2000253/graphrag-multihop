@@ -1,0 +1,32 @@
+{
+  "strategy": "hybrid",
+  "split": "dev",
+  "k": 5,
+  "model": "claude-haiku-5-5",
+  "questions": 15,
+  "failures": 0,
+  "exact_match": 0.6,
+  "f1": 0.7521885521885522,
+  "evidence_recall": 0.9,
+  "all_evidence_rate": 0.8,
+  "avg_retrieval_s": 0.12651374319996952,
+  "avg_generation_s": 1.6952187576666498,
+  "avg_total_s": 1.8217325008666194,
+  "input_tokens": 21509,
+  "output_tokens": 2619,
+  "estimated_cost_usd": 0.0034604,
+  "by_type": {
+    "bridge": {
+      "n": 12,
+      "em": 0.5833333333333334,
+      "f1": 0.7550505050505051,
+      "evidence_recall": 0.875
+    },
+    "comparison": {
+      "n": 3,
+      "em": 0.6666666666666666,
+      "f1": 0.7407407407407408,
+      "evidence_recall": 1.0
+    }
+  }
+}

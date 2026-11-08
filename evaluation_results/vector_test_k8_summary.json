@@ -1,0 +1,32 @@
+{
+  "strategy": "vector",
+  "split": "test",
+  "k": 8,
+  "model": "claude-haiku-5-5",
+  "questions": 35,
+  "failures": 0,
+  "exact_match": 0.42857142857142855,
+  "f1": 0.5830054831297067,
+  "evidence_recall": 0.8714285714285714,
+  "all_evidence_rate": 0.7428571428571429,
+  "avg_retrieval_s": 0.04323148562856269,
+  "avg_generation_s": 1.3687585758285552,
+  "avg_total_s": 1.411990061457118,
+  "input_tokens": 63716,
+  "output_tokens": 4070,
+  "estimated_cost_usd": 0.0084066,
+  "by_type": {
+    "bridge": {
+      "n": 29,
+      "em": 0.3793103448275862,
+      "f1": 0.5656962727427495,
+      "evidence_recall": 0.8448275862068966
+    },
+    "comparison": {
+      "n": 6,
+      "em": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "evidence_recall": 1.0
+    }
+  }
+}

@@ -7,16 +7,20 @@ from pathlib import Path
 from app.common import get_driver
 from app.generation import MODEL, generate_answer
 from app.metrics import exact_match, f1_score
-from app.retrieval import vector_search
+from functools import partial
+
+from app.retrieval import graph_search, hybrid_search, vector_search
 
 PRICE_IN, PRICE_OUT = 0.10, 0.50  # USD per million tokens (list price, prompts <= 100K tokens)
-STRATEGIES = {"vector": vector_search}
+STRATEGIES = {"vector": vector_search, "graph": graph_search, "hybrid": hybrid_search}
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--strategy", default="vector", choices=STRATEGIES)
 parser.add_argument("--split", default="dev", choices=["dev", "test", "all"])
 parser.add_argument("--k", type=int, default=5)
 parser.add_argument("--limit", type=int, default=None)
+parser.add_argument("--depth", type=int, default=2)
+parser.add_argument("--max-graph", type=int, default=3)
 args = parser.parse_args()
 
 with open("data/processed/questions.jsonl", encoding="utf-8") as f:
@@ -27,6 +31,8 @@ if args.limit:
     questions = questions[: args.limit]
 
 search = STRATEGIES[args.strategy]
+if args.strategy in ("graph", "hybrid"):
+    search = partial(search, depth=args.depth, max_graph=args.max_graph)
 results = []
 with get_driver() as driver:
     for q in questions:
@@ -53,6 +59,7 @@ with get_driver() as driver:
             "retrieved_chunk_ids": [h["chunk_id"] for h in hits],
             "retrieved_titles": [h["title"] for h in hits],
             "scores": [round(h["score"], 4) for h in hits],
+            "via": [h.get("via", "vector") for h in hits],
             "citations": gen["citations"],
             "retrieval_s": t1 - t0, "generation_s": t2 - t1, "total_s": t2 - t0,
             "input_tokens": gen["input_tokens"], "output_tokens": gen["output_tokens"],
@@ -93,6 +100,8 @@ summary["by_type"] = {
 out = Path("evaluation_results")
 out.mkdir(exist_ok=True)
 stem = f"{args.strategy}_{args.split}_k{args.k}"
+if args.strategy != "vector":
+    stem += f"_d{args.depth}_g{args.max_graph}"
 with open(out / f"{stem}.jsonl", "w", encoding="utf-8") as f:
     for r in results:
         f.write(json.dumps(r, ensure_ascii=False) + "\n")

@@ -1,0 +1,6 @@
+System,EM,F1,Evidence recall,All evidence found,Avg latency (s),Est. cost (USD),Failures
+Vector k=5 (baseline),0.371,0.537,0.786,0.600,1.61,0.0063,0
+Vector k=8 (control),0.429,0.583,0.871,0.743,1.41,0.0084,0
+Graph only (depth 2),0.371,0.489,0.643,0.457,1.33,0.0038,0
+Hybrid depth 1,0.486,0.670,0.886,0.800,1.45,0.0066,0
+Hybrid depth 2,0.429,0.608,0.886,0.800,1.59,0.0071,0
