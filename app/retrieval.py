@@ -107,3 +107,44 @@ def hybrid_search(question, k, driver, depth=2, max_graph=3):
     extra = _graph_candidates(seeds, qvec, {h["chunk_id"] for h in hits},
                               depth, max_graph, driver)
     return hits + extra
+
+
+def graph_neighborhood(question, driver, depth=2, max_degree=12, max_nodes=24):
+    """Entities named in the question plus nearby entities and the arrows between them."""
+    seeds = list(set(question_entities(question, driver)))
+    if not seeds:
+        return {"nodes": [], "edges": []}
+    depth = max(1, min(int(depth), 3))
+    query = f"""
+    MATCH (seed:Entity) WHERE seed.entity_id IN $seed_ids
+    MATCH p = (seed)-[:RELATION*1..{depth}]-(n:Entity)
+    WHERE all(x IN nodes(p)[1..] WHERE COUNT {{ (x)-[:RELATION]-() }} <= $max_degree)
+    WITH p ORDER BY length(p) LIMIT 80
+    UNWIND relationships(p) AS r
+    WITH DISTINCT r
+    RETURN startNode(r).entity_id AS a_id, startNode(r).name AS a, r.predicate AS predicate,
+           endNode(r).entity_id AS b_id, endNode(r).name AS b, r.evidence AS evidence
+    """
+    records, _, _ = driver.execute_query(query, seed_ids=seeds, max_degree=max_degree)
+    seed_rows, _, _ = driver.execute_query(
+        "MATCH (e:Entity) WHERE e.entity_id IN $ids RETURN e.entity_id AS id, e.name AS name",
+        ids=seeds)
+    ring = {r["id"]: 0 for r in seed_rows}
+    names = {r["id"]: r["name"] for r in seed_rows}
+    edges = [r.data() for r in records]
+    for e in edges:
+        names[e["a_id"]], names[e["b_id"]] = e["a"], e["b"]
+    changed = True
+    while changed:
+        changed = False
+        for e in edges:
+            for x, y in ((e["a_id"], e["b_id"]), (e["b_id"], e["a_id"])):
+                if x in ring and (y not in ring or ring[y] > ring[x] + 1):
+                    ring[y] = ring[x] + 1
+                    changed = True
+    keep = set(sorted(ring, key=lambda i: ring[i])[:max_nodes])
+    nodes = [{"id": i, "name": names[i], "ring": ring[i]} for i in keep]
+    out_edges = [{"source": e["a_id"], "target": e["b_id"], "predicate": e["predicate"],
+                  "evidence": e["evidence"]}
+                 for e in edges if e["a_id"] in keep and e["b_id"] in keep]
+    return {"nodes": nodes, "edges": out_edges}

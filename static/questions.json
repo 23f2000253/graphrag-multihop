@@ -1,0 +1,352 @@
+[
+ {
+  "id": "5a7613c15542994ccc9186bf",
+  "question": "VIVA Media AG changed it's name in 2004. What does their new acronym stand for?",
+  "answer": "Gesellschaft mit beschränkter Haftung",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5adf2fa35542993344016c11",
+  "question": "Which of Jonny Craig and Pete Doherty has been a member of more bands ?",
+  "answer": "Jonny\" Craig",
+  "type": "comparison",
+  "split": "dev"
+ },
+ {
+  "id": "5adfdef9554299025d62a36b",
+  "question": "Where was the first governor after the The Missouri Compromise from?",
+  "answer": "Bath, Maine",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5a7180205542994082a3e856",
+  "question": "The creator of \"Wallace and Gromit\" also created what animation comedy that matched animated zoo animals with a soundtrack of people talking about their homes? ",
+  "answer": "Creature Comforts",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5a78bc6b554299148911f979",
+  "question": "Woman's Era and Naj are what kind of magazines?",
+  "answer": "fortnightly women interest magazine",
+  "type": "comparison",
+  "split": "dev"
+ },
+ {
+  "id": "5abdd0f15542991f6610604d",
+  "question": "The Rome Protocols were signed by three Prime Ministers one of which was assassinated as part of what?",
+  "answer": "a failed coup attempt",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5a8e27d45542995a26add46a",
+  "question": "Jaclyn Stapp is married to the former frontman of a band that disbanded in what year?",
+  "answer": "2004",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5a881d2355429938390d3eeb",
+  "question": " If You Ever Get Lonely was covered by what Lyric Street Records-affiliated band?",
+  "answer": "Love and Theft",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5ae4a1ef55429970de88d9e7",
+  "question": "When was the  Argentine former footballer which  Dutch manager Ronald Koeman replaced in  2014–15 Southampton F.C. season born",
+  "answer": "2 March 1972",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5ae6f2a7554299572ea5464a",
+  "question": "Which character does this protagonist, who secretly loves and marries a member of the rival house, of William Shakespeare's tragedy that has a fictional character Benvolio slay?",
+  "answer": "Tybalt",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5a845d735542996488c2e52e",
+  "question": "Stronger Together was used for the campaign comprised of the Vice Presidential candidate who was a Senator from what state?",
+  "answer": "Virginia",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5adf5daf5542995534e8c79d",
+  "question": "Are Darren Benjamin Shepherd and Rémi Lange both American?",
+  "answer": "no",
+  "type": "comparison",
+  "split": "dev"
+ },
+ {
+  "id": "5a7c49dc55429935c91b514f",
+  "question": "The head of the Foreign Relations Department of the Rastriya Janashakti Party holds a degree that can be abbreviated MS, M.S., or ScM, in what field?",
+  "answer": "Engineering",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5abe364e5542993f32c2a08e",
+  "question": "Lollipop Chainsaw featured Juliet Starling, who was voiced by a Canadian-American actress who has done voice roles for what Teen Titans spinoff series?",
+  "answer": "Teen Titans Go!",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5ac557975542993e66e8231c",
+  "question": "What team was led to victory in 1939 by a two-time All-American basketball player nicknamed \"Scat\"?",
+  "answer": "Oklahoma Sooners",
+  "type": "bridge",
+  "split": "dev"
+ },
+ {
+  "id": "5ab28a87554299449642c8ec",
+  "question": "This expansion of the 2008 magazine article \"Is Google Making Us Stoopid?\" was a finalist for what award?",
+  "answer": "Pulitzer Prize",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5adff056554299603e4183cc",
+  "question": "What year did The Chronicle of Philanthropy's publishing overlap with Antic?",
+  "answer": "1988",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5abd578a5542993062266c5d",
+  "question": "The W. H. Shipman House is in what Hawaii county?",
+  "answer": "Hawaii County",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a7b537555429927d897bf90",
+  "question": "The trophy given to the winner of the college football game between University of Idaho Vandals and University of Montana Grizzlies is derived from which European culture?",
+  "answer": "German",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a7dc3275542997cc2c4749c",
+  "question": "What stadium does the team who has Kent Baer as the defensive coordinator play its home games?",
+  "answer": "Sam Boyd Stadium",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab5487b554299494045ef68",
+  "question": "Operation Cold Comfort was a failed raid by a special forces unit founded in what year?",
+  "answer": "1941",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ac2758b55429963665199c3",
+  "question": "The organization that Nicolae Titulescu served two terms as president was founded on what date?",
+  "answer": "10 January 1920",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab7f97a5542991d322237ef",
+  "question": "What is Opry Mills in Nashville, Tennessee?",
+  "answer": "super-regional shopping mall",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a81e107554299676cceb12a",
+  "question": "Ed Oxenbould plays Tyler in a film directed by which famous director?",
+  "answer": "M. Night Shyamalan",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab6f7415542991d322236f4",
+  "question": "Sadok Sassi played for a national team that made its first World Cup in what year?",
+  "answer": "1978",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ac562985542993e66e823ca",
+  "question": "Otterington railway station was on a 393 mi major railway that linked Edinburgh to what city?",
+  "answer": "London",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a87bd4e5542994846c1cde0",
+  "question": "Are both Coldplay and Pierre Bouvier from the same country?",
+  "answer": "no",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5aba52e655429939ce03dc94",
+  "question": "This term about a playwright who lived from 1564-1616 presented what about his works? ",
+  "answer": "chronological collection of critical quotations",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab58f9a554299488d4d99da",
+  "question": "What is the birthday of this Anglo-Irish actress, courtean, and mistress, who was the mother to the illegitimate daughter of King William IV?",
+  "answer": "22 November",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ae67def5542991bbc9760f3",
+  "question": "Kenneth L. Gile is the Chief Operating Officer of an airline with its head office in what airport?",
+  "answer": "Dubai International Airport",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5adeb78a554299728e26c77a",
+  "question": "In what state is the manufacturer of Bisquick headquartered?",
+  "answer": "Minnesota",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ae66d515542992ae0d16346",
+  "question": "In what year was the singer who popularized \"I'll Keep the Lovelight Burning\" born?",
+  "answer": "1927",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a8e60ca5542995a26add4d9",
+  "question": "In which movie the Stephanie Kay Panabaker was alongside with her elder sister Danielle Nicole Panabaker?",
+  "answer": "\"Read It and Weep\" (2006)",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a72a2935542991f9a20c546",
+  "question": "Is Velvetpark or Shape magazine written more for a lesbian and queer-identified female readership?",
+  "answer": "Velvetpark",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5a7f7b3b5542992097ad2f81",
+  "question": "Which restaurant chain's headquarters is further north, Pizza Inn or Papa Gino's?",
+  "answer": "Papa Gino's",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5a82ebb855429966c78a6a9c",
+  "question": "whats the famous bavagheet by arun date?",
+  "answer": "Shukratara",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5add596f5542990dbb2f7e4d",
+  "question": "Grown-Ups starred the actor who was best known for which role on  \"'Allo 'Allo!\"?",
+  "answer": "Captain Hans Geering",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ac4db1d554299076e296e1a",
+  "question": "who is a British physicist  and also a  British government's chief scientific adviser",
+  "answer": "Frederick Alexander",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ac532335542994611c8b41c",
+  "question": "Howard Van Doren Shaw was the designer of which 1917 Progressive Era community? ",
+  "answer": "Marktown",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ae7a8d35542994a481bbdbb",
+  "question": "Which contest in California pays homage to an American novelist that won the Novel Prize in Literature in 1954?",
+  "answer": "The Bad Hemingway Contest",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a8db348554299068b959dc2",
+  "question": "What is the subsidiary of the record company who released \"Love Incredible?\"",
+  "answer": "Vivendi S.A.",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5adcbb815542994ed6169bde",
+  "question": "Beer Wars covers the differences between large corporate breweries, and small breweries, such as what brewery that is headquartered in Escondido, california?",
+  "answer": "Stone Brewing",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab915ad55429919ba4e239c",
+  "question": "Who did Muhummad Ali fight next, in Houston, after the so-called Fight of the Century with Joe Frazier?",
+  "answer": "Jimmy Ellis",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ab94fa25542996be2020474",
+  "question": "What is represented on the cover art of the studio album that includes the song \"Speed of Sound\"?",
+  "answer": "Baudot code",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a7ca0ef55429907fabeefd3",
+  "question": "Which professional tennis player was born first, Lucie Hradecká or Raffaella Reggi?",
+  "answer": "Raffaella Reggi",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5a7a5b3a5542996c55b2dd71",
+  "question": "What building is opposite the ceremonial meeting place of the Accession Council in the United Kingdom?",
+  "answer": "Mark Masons' Hall",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5abbd3ac55429931dba1458b",
+  "question": "Are both Duke Energy and Affiliated Managers Group based in Massachusetts?",
+  "answer": "no",
+  "type": "comparison",
+  "split": "test"
+ },
+ {
+  "id": "5ac3af895542995ef918c1f0",
+  "question": "Janne Kyttanen has had work exhibited at which modern art museum in Amsterdam?",
+  "answer": "Stedelijk Museum Amsterdam",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5a72dcb45542992359bc31af",
+  "question": "What company did Rex Maughan aquire?",
+  "answer": "Aloe Vera of America",
+  "type": "bridge",
+  "split": "test"
+ },
+ {
+  "id": "5ae1e22a5542997f29b3c160",
+  "question": "The role of \"Celene\" in the film \"Walk All over Me\" was played by an actress that voices what role in the \"Starcraft 2\" triolgy?",
+  "answer": "Sarah Kerrigan",
+  "type": "bridge",
+  "split": "test"
+ }
+]
