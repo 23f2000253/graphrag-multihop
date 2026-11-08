@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from fastembed import TextEmbedding
 from neo4j import GraphDatabase
 
-load_dotenv()
+load_dotenv(os.getenv("ENV_FILE", ".env"))
 
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 MODEL_CACHE = "data/models"
