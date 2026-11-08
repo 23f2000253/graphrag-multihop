@@ -3,6 +3,14 @@
 A final-year project that measures whether adding a knowledge graph to ordinary
 vector retrieval improves answers to questions that need facts from several documents.
 
+## Live demo
+
+https://graphrag-multihop.onrender.com
+
+Free hosting: the server sleeps after about 15 minutes without visitors, and the first
+request afterwards can take around a minute. The demo searches a small sample (500 paragraphs),
+so use the Question bank page to find questions it can answer.
+
 ## The problem
 
 Example: "Where was the director of the film starring actor X born?" needs a chain of
@@ -89,7 +97,7 @@ Full tables, per-question outputs, and examples where the graph helped or hurt a
   text is the source of truth.
 - Entity merging is deliberately conservative, so some duplicates remain.
 - Exact Match penalises correct answers with extra words; F1 is more informative here.
-- No reranking, question decomposition, or public deployment yet.
+- No reranking or question decomposition. Free hosting is slow after idle periods.
 
 ## Setup
 
@@ -115,6 +123,25 @@ python -m scripts.run_eval --strategy hybrid --split test --depth 2
 python -m scripts.compare
 python -m pytest -q
 ```
+
+## Deployment
+
+- **Graph and vectors:** Neo4j AuraDB Free (a managed cloud database).
+- **Web app:** one FastAPI service that also serves the web page, on a Render free web service.
+- **Build command:** `pip install -r requirements-deploy.txt && python -c "from app.common import get_embedder; get_embedder()"`
+  (this downloads the embedding model during the build).
+- **Start command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+- **Environment variables** (set in the hosting dashboard, never committed): `NEO4J_URI`,
+  `NEO4J_USER`, `NEO4J_PASSWORD`, `ANTHROPIC_API_KEY`, `PYTHON_VERSION`, `PER_IP_LIMIT`,
+  `OMP_NUM_THREADS`, `MALLOC_ARENA_MAX`.
+- **Loading the graph into the cloud database:** put the cloud credentials in `.env.aura`
+  (ignored by Git), then run `build_index`, `build_graph` and `link_titles` with
+  `ENV_FILE=.env.aura python -m scripts.<name>`. These steps do not call the LLM.
+- **Endpoints:** `GET /health`, `POST /query`, `POST /graph`, `GET /documents/{chunk_id}`.
+- **Protection:** question length limit, a per-visitor request limit and a daily request limit,
+  so a public demo cannot spend the API budget.
+- **Operational notes:** free tiers sleep when idle, and a free Aura instance can pause when
+  unused; resume it from the Aura console if the app reports the database as unavailable.
 
 ## Project structure
 
